@@ -1,0 +1,31 @@
+{
+  "name": "results-worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand ./__tests__/integration-tests",
+    "dev": "ts-node-dev --respawn --pretty --transpile-only src/app.worker.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@types/dotenv": "^8.2.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "babel-jest": "^27.4.4",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/axios": "^0.14.0",
+    "axios": "^0.24.0",
+    "jest": "^27.4.4",
+    "mongodb-memory-server": "^8.0.4",
+    "mongoose": "^6.1.1"
+  }
+}
