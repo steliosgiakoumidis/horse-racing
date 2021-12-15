@@ -11,3 +11,8 @@ docker-compose up -d
 (you do not have to run in detached mode but it highly suggested.)
 
 The above command will spin up 3 containers, the two apps described above and a mongodb instance. User name and password are hardcoded for the database in the docker.compose file as it is not considered a security issue in this context.
+
+In order to query the service curl localhost and set pagination as below
+```
+curl 'localhost:7000/results?limit=10&page=0'
+```
