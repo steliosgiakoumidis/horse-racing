@@ -16,7 +16,7 @@ services:
     environment:
       - BASE_URL=http://35.207.169.147
       - MONGO_CONNECTIONSTRING=mongodb://AzureDiamond:hunter2@mongodb:27017
-      - AUTH_PASSWORD=lTgAYaLP9jRs
+      - AUTH_PASSWORD=
   web-app:
     depends_on:
       - mongodb
