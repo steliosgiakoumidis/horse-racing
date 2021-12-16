@@ -1,28 +1,12 @@
 import axios, { AxiosError, AxiosResponse, } from 'axios';
 import request from "axios";
 import { IRaceInfo } from './types/raceInfo.interface';
-// import Entry from './models';
-// import mongoose from "mongoose";
 import dotenv from 'dotenv';
 import {initiateDbConnection, storeEntry} from './services/db-access';
 
 dotenv.config();
 
 const uri: string = process.env.MONGO_CONNECTIONSTRING as string;
-
-// const initiateDbConnection = async (): Promise<void> => {
-//     await mongoose.connect(uri);
-//     console.error("db connection initialized")
-// }
-
-// const storeEntry = async (entry: IEntry): Promise<void> => {
-//     try {
-//         var dbEntry: IEntry = new Entry(entry)
-//         await dbEntry.save();
-//     } catch (error) {
-//         console.error("Write to db failed. Error: " + error);
-//     }
-// }
 
 const sleep = async (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
