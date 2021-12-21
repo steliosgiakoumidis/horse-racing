@@ -79,9 +79,9 @@ const worker = async (): Promise<void> =>{
 }
 
 try {
-    initiateDbConnection();
+    initiateDbConnection().then(() => {
+             worker();
+    });
 } catch (error) {
-    console.error("Database connection error. Error: " + error)
+    console.error("Error: " + error)
 }
-
-worker();
